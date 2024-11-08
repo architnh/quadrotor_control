@@ -1,6 +1,19 @@
+# Contents
+ - [ESKF](#ESKF) 
+ - [Path Planning](#path-planning) 
 
-# Comparison of Dijkstra's and A* for path planning.
-## Overview :
+## ESKF 
+Sensor fusion of IMU measurements and the stereo pair of camera images can be used to get the visual intertial odometry (VIO).This helps us estimate the pose of the flying robot using Error State Kalman filter (ESKF).
+
+
+## Path Planning
+Crazyflie navigating around obstacles is seen in the gif below. 
+<img src=docs/drone_lab.gif height="240" width="426" />
+
+---
+
+Following is a comparison of A* and Dijkstra's algorithms.
+### Overview :
 Repository for comparison of multiple path-planning approaches like Dijkstra's, A*. This was part of the MEAM 6200 Advanced Robotics class by Dr. M. Ani Hsieh at University of Pennsylvania. While planning for quadrotor motion in cluttered environments, it is necessary to study muliple approaches for better path planning. Following is a comparison between two approaches.
 
 <img src=docs/dijkstras.gif height="350" width="350" /> <img src=docs/astar.gif height="350" width="350" /> 
@@ -9,7 +22,7 @@ Figure 1: Dijkstra's algorithm vs A* algorithm implemented in a cluttered enviro
 
 <p></p>
 
-## Dijkstra's Algorithm Pseudocode:
+### Dijkstra's Algorithm Pseudocode:
 
 ``` 
 function Dijkstra(Graph, source):                                                  
@@ -41,7 +54,7 @@ function Dijkstra(Graph, source):
 
 The pseudocode of Dijkstra's algorithm using heap queue that I used is listed as above. ([Source](https://en.wikipedia.org/wiki/Dijkstra's_algorithm)) &emsp;
 
-## A* Algorithm Pseudocode:
+### A* Algorithm Pseudocode:
 ``` 
 function Dijkstra(Graph, source):                                                  
     dist[source] ← 0               
